@@ -1,0 +1,313 @@
+:root {
+  --text-foreground: #f0f0f0;
+  --text-secondary: #e4e4e4;
+  --bg-danger: rgb(246, 88, 88);
+  --bg-blue: #4158d0;
+  --bg-violet: #c850c0;
+  --bg-orange: #f3bf5d;
+  --bg-teal: #0adfdf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif, system-ui;
+}
+
+body {
+  background: var(--bg-danger);
+  background: -webkit-linear-gradient(to right bottom, #240b36, #c31432);
+  background: linear-gradient(to right bottom, #240b36, #c31432);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.app-container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    var(--bg-blue) 0%,
+    var(--bg-violet) 46%,
+    var(--bg-orange) 100%
+  );
+  text-shadow: 3px 3px #f0f0f0;
+}
+
+.header-menu_list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-menu_list_item {
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.header-menu_list_item:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.note-search_form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.note-search_input {
+  padding: 5px 12px;
+}
+
+.note-search_submit {
+  border-radius: 4px;
+  background-color: var(--bg-teal);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.app-section_title {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.app-section._add-note {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+}
+
+.add-note_form {
+  width: 80%;
+}
+
+.add-note_form h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.add-note_form .add-note_max_length_message {
+  margin-top: 3px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.add-note_form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.add-note_form .input-group label {
+  font-size: 15px;
+}
+
+.add-note_form button {
+  margin-top: 10px;
+  background-color: rgb(220, 18, 163);
+  color: white;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 24px;
+}
+
+.note-list_empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 48px;
+}
+
+.note-list_empty_message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.note-item .note-item_title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-foreground);
+  margin-bottom: 6px;
+  line-height: 1.15rem;
+}
+
+.note-item .note-item_body {
+  white-space: wrap;
+  text-wrap: wrap;
+  color: var(--text-secondary);
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.note-item .note-item_createdAt {
+  margin-top: 6px;
+  line-height: 1rem;
+  font-size: 14px;
+}
+
+.note-item .note-item_action {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.note-item_action button {
+  color: white;
+}
+
+.note-item_action button.note-item_delete {
+  background-color: var(--bg-danger);
+}
+
+.note-item_action button.note-item_delete:hover {
+  background-color: var(--bg-danger);
+}
+
+.note-item_action button.note-item_archived {
+  background-color: var(--bg-orange);
+}
+
+.note-item_action button.note-item_archived:hover {
+  background-color: var(--bg-orange);
+}
+
+/* GLOBALS CSS CONFIG */
+input,
+textarea {
+  background-color: #efefef;
+  padding: 6px 8px;
+  border: none;
+  outline: none;
+  transition: all ease 300ms;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: all ease 300ms;
+  -moz-transition: all ease 300ms;
+  -ms-transition: all ease 300ms;
+  -o-transition: all ease 300ms;
+}
+
+input:focus,
+textarea:focus {
+  background-color: white;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  outline: none;
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-transition: all ease-in-out 200ms;
+  -moz-transition: all ease-in-out 200ms;
+  -ms-transition: all ease-in-out 200ms;
+  -o-transition: all ease-in-out 200ms;
+}
+
+button:hover {
+  opacity: 80%;
+}
+
+/* RESPONSIVE NEEDS */
+@media only screen and (max-width: 876px) {
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .add-note_form {
+    width: 100%;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .note-search_form {
+    width: 100%;
+  }
+
+  .note-search_input {
+    width: 80%;
+  }
+
+  .note-search_submit {
+    width: 20%;
+  }
+
+  .app-section._add-note {
+    align-items: start;
+    width: 100%;
+  }
+
+  .add-note_form {
+    width: 100%;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

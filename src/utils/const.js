@@ -1,0 +1,4 @@
+const NOTE_LIST_EMPTY_MESSAGE = 'Tidak ada catatan tersedia';
+const NOTE_TITLE_MAX_LENGTH = 50;
+
+export { NOTE_LIST_EMPTY_MESSAGE, NOTE_TITLE_MAX_LENGTH };
